@@ -1,0 +1,4 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=678
+
+This is a function meant to deal with a simple case of indentation:
+The assumption is that you have blocks whose begining and end can be identified by a pattern. In this case, you just set b:indent_block_start and b:indent_block_end to these patterns, and the function returns the indent of a line based on the assumption that all lines within a block should be indented by one shiftwidth. It is also possible to ignore lines matching a certain pattern (e.g., comments) using a third variable b:indent_ignore. For an example, see the fluxbox indent file (vimscript #679).
