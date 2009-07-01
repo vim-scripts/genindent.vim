@@ -1,7 +1,7 @@
 " File Name: genindent.vim
-" Maintainer: Moshe Kaminsky
+" Maintainer: Moshe Kamensky
 " Original Date: June 15, 2003
-" Last Update: June 15, 2003
+" Last Update: Tue 30 Jun 2009 09:49:39 PM EDT
 " Description: provides a function GenericIndent, that returns the indent in 
 " the following simple situation:
 " We have blocks, the start of each block is a string that matches a certain 
@@ -38,7 +38,7 @@ function GenericIndent(lnum)
   while lnum > 0 && getline(lnum) =~ b:indent_ignore
     let lnum = prevnonblank(lnum - 1)
   endwhile
-  if lnum = 0
+  if lnum == 0
     return 0
   endif
   let curline = getline(a:lnum)
@@ -53,6 +53,3 @@ function GenericIndent(lnum)
   return indent
 endfunction
 
-
-""" Vim modeline: (Must be the last line in the file!)
-""" vim: set co=80 lines=25:
